@@ -53,7 +53,7 @@ This example assumes that the user agent requires a user gesture on the document
   document.querySelector('button').addEventListener('click', () => {
     var frame = document.createElement('iframe');
     frame.src = '/my_player.html';
-    frame.allowedGestureDelegation = 'media';
+    frame.allowedGestureDelegation.add('media');
     document.querySelector('#player-container').appendChild(frame);
   }, { once: true });
 </script>
