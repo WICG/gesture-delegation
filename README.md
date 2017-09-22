@@ -1,4 +1,4 @@
-# Gesture Delegation Web Standard
+# Activation Delegation Web Standard
 
 ## Explainer
 

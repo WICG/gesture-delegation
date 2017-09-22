@@ -1,6 +1,6 @@
 ## Summary
 
-Gesture Delegation introduces a way for a frame to delegate user activation to its iframe. The main use case is for document
+Activation Delegation introduces a way for a frame to delegate user activation to its iframe. The main use case is for document
 activations that can then be delegated to an iframe instead of expecting the iframe to be independently activated.
 
 To our knowledge it poses no known security or privacy risks.
