@@ -1,4 +1,4 @@
-# Activation Delegation Explained
+# User Activation Delegation Explained
 
 ## Objective
 Some features on the platform require a user activation in order to be triggered. Among these features, some of them require a
@@ -29,11 +29,11 @@ will have known keywords that, if set, will allow the delegation of user activat
 
 ```javascript
 partial interface HTMLIFrameElement {
-  [SameObject, PutForwards=value] readonly attribute DOMTokenList allowActivationDelegation;
+  [SameObject, PutForwards=value] readonly attribute DOMTokenList allowUserActivationDelegation;
 };
 ```
 
-The `allowActivationDelegation` known keywords are:
+The `allowUserActivationDelegation` known keywords are:
  - `vibration`, which delegates user activation to the iframe in the context of the Vibration API.
  - `media`, which delegates user activation to the iframe in the context of media playback (ie. autoplay).
 
@@ -53,7 +53,7 @@ This example assumes that the user agent requires a user activation on the docum
   document.querySelector('button').addEventListener('click', () => {
     var frame = document.createElement('iframe');
     frame.src = '/my_player.html';
-    frame.allowedActivationDelegation.add('media');
+    frame.allowUserActivationDelegation.add('media');
     document.querySelector('#player-container').appendChild(frame);
   }, { once: true });
 </script>
