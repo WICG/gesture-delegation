@@ -20,12 +20,18 @@ embedder also delegated user activation and received user activation.
 For example, a website could embed a video player in an iframe and would like the player to start playback when the user
 interact on the main frame.
 
-## Proposed API
-The API is meant to be future facing, allowing for new features to gate their behaviour on user activations while staying
-simple, in order to reduce the burden on the embedder.
+## Proposal
+
+### New HTML Concept
+
+As part of _6.3 Activation_, a new flag would be added to the browsing context: __user activated__. When a user activation targets an element, the __user activated__ flag of the element's browsing context is set to true and is never reset until the browsing context is navigated outside of the current domain.
+
+### New API
+
+The API is meant to be future facing, allowing for new features to gate their behaviour on whether a browsing context was __user activated__ while staying simple, in order to reduce the burden on the embedder.
 
 The attribute will take the form of an attribute that could be set on the `iframe` element by the embedder. The attribute
-will have known keywords that, if set, will allow the delegation of user activation to the iframe for a given feature.
+will have known keywords that, if set, will allow the delegation of the browsing context user activation to the iframe for a given feature.
 
 ```javascript
 partial interface HTMLIFrameElement {
