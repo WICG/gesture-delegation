@@ -29,13 +29,13 @@ will have known keywords that, if set, will allow the delegation of user activat
 
 ```javascript
 partial interface HTMLIFrameElement {
-  [SameObject, PutForwards=value] readonly attribute DOMTokenList allowedActivationDelegation;
+  [SameObject, PutForwards=value] readonly attribute DOMTokenList allowActivationDelegation;
 };
 ```
 
-The `allowedActivationDelegation` known keywords are:
-`vibration`, which delegates user activation to the iframe in the context of the Vibration API.
-`media`, which delegates user activation to the iframe in the context of media playback (ie. autoplay).
+The `allowActivationDelegation` known keywords are:
+ - `vibration`, which delegates user activation to the iframe in the context of the Vibration API.
+ - `media`, which delegates user activation to the iframe in the context of media playback (ie. autoplay).
 
 If a feature's associated keyword is not present, delegation will not apply. In other words, the API will not offer a way to
 allow all types of user activation delegation to an iframe.
