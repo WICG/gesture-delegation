@@ -24,7 +24,7 @@ interact on the main frame.
 
 ### New HTML Concept
 
-As part of _6.3 Activation_, a new flag would be added to the browsing context: __user activated__. When a user activation targets an element, the __user activated__ flag of the element's browsing context is set to true and is never reset until the browsing context is navigated outside of the current domain.
+As part of _6.3 Activation_, a new flag would be added to the browsing context: __user activated__. When a user activation targets an element, the __user activated__ flag of the element's browsing context is set to true and is never reset until the browsing context is navigated outside of the current eTLD+1.
 
 ### New API
 
