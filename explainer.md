@@ -1,6 +1,7 @@
-# User Activation Delegation Explained
+# Document User Activation Delegation Explained
 
 ## Objective
+
 Some features on the platform require a user activation in order to be triggered. Among these features, some of them require a
 user activation to have happened on the document. Gating features to user activations is meant to reduce user annoyance but can
 hurt the ecosystem when the features are triggered from an iframe. Indeed, iframes may be used as components of a websites
@@ -9,6 +10,7 @@ embedder would still allow the embedder to limit the behaviour of an iframe with
 experience.
 
 ## Use Cases
+
 The use cases are currently limited to features that require a user activation on a document, not a user activation on the stack of
 the call. There are two cases of these on the platform at the moment:
 - The Vibration API can only be triggered if the document was interacted with at some point in the past;
@@ -35,7 +37,7 @@ will have known keywords that, if set, will allow the delegation of the browsing
 
 ```javascript
 partial interface HTMLIFrameElement {
-  [SameObject, PutForwards=value] readonly attribute DOMTokenList allowUserActivationDelegation;
+  [SameObject, PutForwards=value] readonly attribute DOMTokenList delegateStickyUserActivation;
 };
 ```
 
@@ -59,7 +61,7 @@ This example assumes that the user agent requires a user activation on the docum
   document.querySelector('button').addEventListener('click', () => {
     var frame = document.createElement('iframe');
     frame.src = '/my_player.html';
-    frame.allowUserActivationDelegation.add('media');
+    frame.delegateStickyUserActivation.add('media');
     document.querySelector('#player-container').appendChild(frame);
   }, { once: true });
 </script>
