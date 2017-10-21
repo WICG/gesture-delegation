@@ -1,4 +1,4 @@
-# User Activation Delegation Web Standard
+# Document User Activation Delegation Web Standard
 
 ## Explainer
 
