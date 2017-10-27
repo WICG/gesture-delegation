@@ -41,6 +41,8 @@ partial interface HTMLIFrameElement {
 };
 ```
 
+The `delegateStickyUserActivation` IDL attribute must reflect the `delegatestickyuseractivation` content attribute.
+
 The `delegateStickyUserActivation` known keywords are:
  - `vibration`, which delegates user activation to the iframe in the context of the Vibration API.
  - `media`, which delegates user activation to the iframe in the context of media playback (ie. autoplay).
