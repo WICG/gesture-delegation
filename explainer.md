@@ -41,7 +41,7 @@ partial interface HTMLIFrameElement {
 };
 ```
 
-The `allowUserActivationDelegation` known keywords are:
+The `delegateStickyUserActivation` known keywords are:
  - `vibration`, which delegates user activation to the iframe in the context of the Vibration API.
  - `media`, which delegates user activation to the iframe in the context of media playback (ie. autoplay).
 
