@@ -1,4 +1,8 @@
-# Document User Activation Delegation Web Standard
+## Historical archive of "Document User Activation Delegation Web Standard"
+
+**Incubation of work has finished and this repo is being kept for historical purposes.**
+
+The work was not formally adopted by any working group. 
 
 ## Explainer
 
